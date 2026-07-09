@@ -5,21 +5,14 @@
 }
 
 .introducao {
-    max-width: 1200px;
-    box-sizing: border-box;
-    padding-left: 20px;
-    padding-right: 20px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 0px 40px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .introducao img {
     height: 100%;
     object-fit: cover;
-    border-radius: 4px;
 }
 
 .introducao_conteudo {
@@ -36,14 +29,7 @@
     margin-bottom: 20px;
 }
 
-@media (max-width: 1200px) {
-    .introducao h1 {
-        font-size: 48px;
-    }
-    .introducao p {
-        font-size: 18px;
-    }
-}
+/* Responsividade */
 
 @media (max-width: 800px) {
     .introducao-bg {
@@ -59,7 +45,6 @@
         padding-bottom: 0px;
     }
     .introducao h1 {
-        font-size: 32px;
         margin-bottom: 16px;
     }
     .introducao img {
