@@ -46,7 +46,7 @@
 }
 
 @media (max-width: 800px) {
-    .footer_image {
+    .footer_logo {
         display: none;
     }
     .footer {
