@@ -16,15 +16,19 @@
     background-color: var(--cor-1);
 }
 
-.perguntas_item dt {
+.perguntas_item button {
     display: grid;
     grid-template-columns: auto 1fr auto;
     align-items: center;
     gap: 8px;
     cursor: pointer;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
 }
 
-.perguntas_item dt::before {
+.perguntas_item button::before {
     content:"";
     display: inline-block;
     width: 12px;
@@ -32,18 +36,29 @@
     background-color: var(--cor-p1);
 }
 
-.perguntas_item dt::after {
+.perguntas_item button::after {
     content:"";
     display: inline-block;
     width: 14px;
     height: 6px;
     background-image: url("../../img/icones/seta-abrir.svg");
+    transition: 0.3s;
+}
+
+.perguntas_item button:hover::after,
+.perguntas_item button[aria-expanded="true"]::after {
+    transform: rotate(180deg);
 }
 
 .perguntas_item dd {
+    display: none;
     padding-left: 20px;
     padding-top: 16px;
     max-width: 80ch;
+}
+
+.perguntas_item dd.ativa {
+    display:block;
 }
 
 @media (max-width: 800px) {
